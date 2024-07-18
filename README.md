@@ -10,8 +10,11 @@
 
 [Nest](https://github.com/nestjs/nest) Project for inventory management in different areas using with shops, supermarket, distribuitors, etc.
 
-## Installation
+## Database Diagrama
+https://dbdiagram.io/d/Inventory-64d5475d02bd1c4a5e9778ef
 
+
+## Installation
 ```bash
 $ npm install
 ```
@@ -53,3 +56,39 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
+## Structure project
+
+project-root/
+├── src/
+│ ├── app.module.ts
+│ ├── main.ts
+│ ├── features/
+│ │ └── _/ # folder
+│ │ ├── _.module.ts
+│ │ ├── controllers/
+│ │ ├── services/
+│ │ ├── _.entity.ts
+│ │ └── _.dto.ts
+│ ├── middlewares/
+│ │ └── _.middleware.ts
+│ ├── communication/
+│ │ ├── tcp/
+│ │ │ └── tcp.client.ts
+│ │ └── ...
+│ └── utils/
+│ └── _.util.ts
+│ └── guard/
+│ └── _.guard.ts
+│ └── decorator/
+│ └── _.decorator.ts
+│ └── contracts/
+│ └── \_.contract.ts
+├── test/
+├── node_modules/
+├── .env
+├── .gitignore
+├── nest-cli.json
+├── package.json
+└── tsconfig.json
